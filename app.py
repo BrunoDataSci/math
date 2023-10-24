@@ -42,9 +42,8 @@ def main():
 
         # Clear the content of the app
         st.empty()
+    main()
 
-    if st.button("Restart"):
-        main()
         
 
 if __name__ == "__main__":
