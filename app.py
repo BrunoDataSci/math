@@ -42,7 +42,7 @@ def main():
 
         # Clear the content of the app
         st.empty()
-    main()
+    generate_question()
 
         
 
