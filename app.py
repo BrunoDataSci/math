@@ -25,4 +25,4 @@ user_answer = st.number_input("Enter your answer:")
 if user_answer == answer:
     st.success("Correct!")
 else:
-    st.error(f"Wrong. The correct answer is {answer}")
+    st.error("Wrong")
