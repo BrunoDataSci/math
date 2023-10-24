@@ -31,6 +31,8 @@ def main():
     st.write(f"What is {st.session_state.num1} {st.session_state.operator} {st.session_state.num2}?")
     
     user_answer = st.number_input("Enter your answer:")
+
+    return check()
     
 
 def check():
