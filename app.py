@@ -17,6 +17,7 @@ def generate_question():
         # Avoid division by zero
         num2 = random.randint(1, 100)
         answer = num1 / num2
+        answer= round(answer)
     
     return num1, num2, operator, answer
 
