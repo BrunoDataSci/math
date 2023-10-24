@@ -38,9 +38,9 @@ def main():
             st.error(f"Wrong. The correct answer is {st.session_state.answer}")
         
         st.write(f"The answer was {st.session_state.num1} {st.session_state.operator} {st.session_state.num2} = {st.session_state.answer}")
-        st.write("Try the next question!")
-
-        # Generate a new question without stopping the session
+    
+    if st.button("New Question"):
+        # Generate a new question manually
         st.session_state.num1, st.session_state.num2, st.session_state.operator, st.session_state.answer = generate_question()
 
 if __name__ == "__main__":
