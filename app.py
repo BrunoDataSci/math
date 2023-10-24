@@ -35,5 +35,9 @@ while y==0:
             st.write(f"The answer was {num1} {operator} {num2} = {answer}")
             y=1
     else:
-        st.button("Restart"):
+        None
+        
+    if st.button("Restart"):
         y=0
+    else:
+        y=1
