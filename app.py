@@ -24,11 +24,6 @@ def generate_question():
 def main():
     st.title("Math Quiz App")
 
-    # Check if a new question is generated
-    '''
-    if "num1" not in st.session_state:
-        st.session_state.num1, st.session_state.num2, st.session_state.operator, st.session_state.answer = generate_question()
-    '''
     st.title(num1,operator, num2) 
     
     user_answer = st.number_input("Enter your answer:")
