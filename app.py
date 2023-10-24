@@ -25,7 +25,7 @@ user_answer = st.number_input("Enter your answer:", key="user_input")
 
 if st.button("Check Answer"):
   
-    if user_answer == st.answer:
+    if user_answer == answer:
         st.success("Correct!")
     else:
         st.error(f"Wrong. The correct answer is {answer}")
