@@ -29,4 +29,5 @@ if st.button("Check"):
             st.success("Correct!")
         else:
             st.error("Wrong")
+    st.write(f'The correct answer is {answer}')
 st.empty()
