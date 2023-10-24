@@ -26,9 +26,10 @@ if user_answer is not None:
     if st.button("Check Answer"):
         if user_answer == answer:
             st.success("Correct!")
+            st.empty()
         else:
             st.error(f"Wrong. The correct answer is {answer}")
-        st.write(f"The answer was {num1} {operator} {num2} = {answer}")
+            st.empty()
 else:
-    None
+    st.empty()
 
