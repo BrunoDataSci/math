@@ -24,7 +24,7 @@ def generate_question():
 def main():
     st.title("Math Quiz App")
 
-    st.title(num1,operator, num2) 
+    st.session_state.num1, st.session_state.num2, st.session_state.operator, st.session_state.answer = generate_question()
     
     user_answer = st.number_input("Enter your answer:")
     
