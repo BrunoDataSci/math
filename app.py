@@ -26,4 +26,4 @@ if st.button("Check"):
             st.success("Correct!")
         else:
             st.error("Wrong")
-
+st.empty()
