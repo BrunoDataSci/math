@@ -42,6 +42,8 @@ def main():
     if st.button("New Question"):
         # Generate a new question manually
         st.session_state.num1, st.session_state.num2, st.session_state.operator, st.session_state.answer = generate_question()
+        # Restart the app
+        main()
 
 if __name__ == "__main__":
     main()
