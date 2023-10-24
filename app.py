@@ -43,7 +43,9 @@ def main():
         # Clear the content of the app
     st.empty()
     generate_question()
-    main()
+    if st.button("Restart"):
+        # Restart the app
+        main()
 
         
 
