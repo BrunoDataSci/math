@@ -42,9 +42,9 @@ def main():
 
     if st.button("Refresh"):
         # Simulate a page refresh
-       
+        st.session_state.num1 = False
         st.caching.clear_cache()
-        generate_question()
+        main()
         
 
 if __name__ == "__main__":
