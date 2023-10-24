@@ -42,7 +42,7 @@ def main():
 
     if st.button("Refresh"):
         # Simulate a page refresh
-        st.session_state.num1 = False
+        del st.session_state[num1]
         st.caching.clear_cache()
         main()
         
