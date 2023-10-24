@@ -29,7 +29,7 @@ def main():
     
     st.write(f"What is {st.session_state.num1} {st.session_state.operator} {st.session_state.num2}?")
     
-    user_answer = st.number_input("Enter your answer:")
+    user_answer = st.number_input("Enter your answer:", key="user_input")
     
     if st.button("Check Answer"):
         if user_answer == st.session_state.answer:
@@ -39,7 +39,7 @@ def main():
         
         st.write(f"The answer was {st.session_state.num1} {st.session_state.operator} {st.session_state.num2} = {st.session_state.answer}")
     
-    if st.button("New Question"):
+    if st.button("New Question", key="new_question"):
         # Generate a new question manually
         st.session_state.num1, st.session_state.num2, st.session_state.operator, st.session_state.answer = generate_question()
         # Restart the app
