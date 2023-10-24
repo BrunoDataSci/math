@@ -20,8 +20,8 @@ else:
 
 st.write(f"What is {num1} {operator} {num2}?")
 
-user_answer = st.number_input("Enter your answer:", value=None)
-if user_answer is not None:
+user_answer = st.number_input("Enter your answer:", value=100000000000)
+if user_answer is not 100000000000:
     if user_answer == answer:
         st.success("Correct!")
     else:
