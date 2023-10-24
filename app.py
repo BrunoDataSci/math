@@ -41,8 +41,9 @@ def main():
         st.write(f"The answer was {st.session_state.num1} {st.session_state.operator} {st.session_state.num2} = {st.session_state.answer}")
 
         # Clear the content of the app
-        st.empty()
+    st.empty()
     generate_question()
+    main()
 
         
 
