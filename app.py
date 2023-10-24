@@ -32,7 +32,7 @@ def main():
     
     user_answer = st.number_input("Enter your answer:")
 
-    return check()
+    check()
     
 
 def check():
