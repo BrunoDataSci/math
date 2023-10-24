@@ -1,6 +1,7 @@
 import streamlit as st
 import random
 
+y=0
 while y==0:
     num1 = random.randint(1, 100)
     num2 = random.randint(1, 100)
@@ -33,8 +34,5 @@ while y==0:
             st.error(f"Wrong. The correct answer is {answer}")
             st.write(f"The answer was {num1} {operator} {num2} = {answer}")
             y==0
-        
-        
-    
     else:
-        None
+        y=0
