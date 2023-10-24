@@ -46,7 +46,7 @@ def main():
         # Delay for 2 seconds
         with st.empty():
             time.sleep(2)
-            main()
+        st.session_state.num1, st.session_state.num2, st.session_state.operator, st.session_state.answer = generate_question()
         
 
 if __name__ == "__main__":
