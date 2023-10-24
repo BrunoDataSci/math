@@ -23,28 +23,26 @@ def generate_question():
 
 # Main Streamlit app
 def main():
-    st.title("Math Quiz App")
-
-    if "num1" not in st.session_state:
-        st.session_state.num1, st.session_state.num2, st.session_state.operator, st.session_state.answer = generate_question()
+    while x==0:
+        st.title("Math Quiz App")
     
-    st.write(f"What is {st.session_state.num1} {st.session_state.operator} {st.session_state.num2}?")
-    
-    user_answer = st.number_input("Enter your answer:", key="user_input")
-    
-    if st.button("Check Answer"):
-        if user_answer == st.session_state.answer:
-            st.success("Correct!")
-        else:
-            st.error(f"Wrong. The correct answer is {st.session_state.answer}")
+        if "num1" not in st.session_state:
+            st.session_state.num1, st.session_state.num2, st.session_state.operator, st.session_state.answer = generate_question()
         
-        st.write(f"The answer was {st.session_state.num1} {st.session_state.operator} {st.session_state.num2} = {st.session_state.answer}")
-
-    if st.button("Refresh"):
-        # Simulate a page refresh
-        del st.session_state[num1]
-        st.caching.clear_cache()
-        generate_question()
+        st.write(f"What is {st.session_state.num1} {st.session_state.operator} {st.session_state.num2}?")
+        
+        user_answer = st.number_input("Enter your answer:", key="user_input")
+        
+        if st.button("Check Answer"):
+            if user_answer == st.session_state.answer:
+                st.success("Correct!")
+            else:
+                st.error(f"Wrong. The correct answer is {st.session_state.answer}")
+            
+            st.write(f"The answer was {st.session_state.num1} {st.session_state.operator} {st.session_state.num2} = {st.session_state.answer}")
+    
+        st.empty()
+        x=0
         
 
 if __name__ == "__main__":
