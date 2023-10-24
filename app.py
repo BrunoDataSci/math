@@ -29,13 +29,13 @@ while y==0:
       
         if user_answer == answer:
             st.success("Correct!")
-            y=1
+            break
         else:
             st.error(f"Wrong. The correct answer is {answer}")
             st.write(f"The answer was {num1} {operator} {num2} = {answer}")
-            y=1
+            break
     else:
-        None
+        break
         
     if st.button("Restart"):
         y=0
