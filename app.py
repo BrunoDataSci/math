@@ -29,9 +29,7 @@ def main():
     if "num1" not in st.session_state:
         st.session_state.num1, st.session_state.num2, st.session_state.operator, st.session_state.answer = generate_question()
     '''
-    st.(num1)
-    st.(operator)
-    st.(num2)
+    st.title(num1,operator, num2) 
     
     user_answer = st.number_input("Enter your answer:")
     
