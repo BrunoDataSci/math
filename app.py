@@ -43,10 +43,8 @@ def main():
         # Clear the content of the app
         st.empty()
 
-        # Delay for 2 seconds
-        with st.empty():
-            time.sleep(2)
-        st.session_state.num1, st.session_state.num2, st.session_state.operator, st.session_state.answer = generate_question()
+    if st.button("Restart"):
+        main()
         
 
 if __name__ == "__main__":
