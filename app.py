@@ -17,7 +17,6 @@ def generate_question():
         # Avoid division by zero
         num2 = random.randint(1, 100)
         answer = num1 / num2
-        answer= round(answer)
     
     return num1, num2, operator, answer
 
@@ -31,12 +30,7 @@ def main():
     st.write(f"What is {st.session_state.num1} {st.session_state.operator} {st.session_state.num2}?")
     
     user_answer = st.number_input("Enter your answer:")
-
-    check()
     
-
-def check():
-    st.session_state.user_answer=main()
     if st.button("Check Answer"):
         if user_answer == st.session_state.answer:
             st.success("Correct!")
@@ -45,7 +39,10 @@ def check():
         
         st.write(f"The answer was {st.session_state.num1} {st.session_state.operator} {st.session_state.num2} = {st.session_state.answer}")
         st.write("Try the next question!")
-        main()
+        
+        # Generate a new question and restart the app
+        st.session_state.num1, st.session_state.num2, st.session_state.operator, st.session_state.answer = generate_question()
+        st.stop()
 
 if __name__ == "__main__":
     main()
