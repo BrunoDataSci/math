@@ -1,10 +1,10 @@
 import streamlit as st
 import random
 
-# Function to generate random math questions
+# Function to generate a random math question
 def generate_question():
-    num1 = random.randint(1, 10)
-    num2 = random.randint(1, 10)
+    num1 = random.randint(1, 100)
+    num2 = random.randint(1, 100)
     operator = random.choice(['+', '-', '*', '/'])
     
     if operator == '+':
@@ -24,23 +24,25 @@ def generate_question():
 def main():
     st.title("Math Quiz App")
 
-    # Generate the first question
-    num1, num2, operator, answer = generate_question()
-
-    user_answer = st.number_input("Enter your answer:", key="user_input")
+    # Check if a new question is generated
+    if "num1" not in st.session_state:
+        st.session_state.num1, st.session_state.num2, st.session_state.operator, st.session_state.answer = generate_question()
+    
+    user_answer = st.number_input("Enter your answer:")
     
     if st.button("Check Answer"):
-        if user_answer == answer:
+        if user_answer == st.session_state.answer:
             st.success("Correct!")
         else:
-            st.error(f"Wrong. The correct answer is {answer}")
+            st.error(f"Wrong. The correct answer is {st.session_state.answer}")
         
-        st.write(f"The answer was {num1} {operator} {num2} = {answer}")
+        st.write(f"The answer was {st.session_state.num1} {st.session_state.operator} {st.session_state.num2} = {st.session_state.answer}")
         
         st.write("Try the next question!")
         
         # Generate a new question
-        num1, num2, operator, answer = generate_question()
+        st.session_state.num1, st.session_state.num2, st.session_state.operator, st.session_state.answer = generate_question()
 
 if __name__ == "__main__":
     main()
+
