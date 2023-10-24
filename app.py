@@ -26,3 +26,5 @@ if user_answer != 100000000000:
         st.success("Correct!")
     else:
         st.error("Wrong")
+else:
+    None
