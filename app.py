@@ -28,7 +28,7 @@ if st.button("Check Answer"):
     if user_answer == st.answer:
         st.success("Correct!")
     else:
-        st.error(f"Wrong. The correct answer is {st.answer}")
+        st.error(f"Wrong. The correct answer is {answer}")
     
     st.write(f"The answer was {num1} {operator} {num2} = {answer}")
 
