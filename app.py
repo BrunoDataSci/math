@@ -23,6 +23,7 @@ def generate_question():
 
 # Main Streamlit app
 def main():
+    x=0
     while x==0:
         st.title("Math Quiz App")
     
