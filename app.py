@@ -6,6 +6,10 @@ num1 = random.randint(1, 100)
 num2 = random.randint(1, 100)
 operator = random.choice(['+', '-', '*', '/'])
 
+st.title("Math Quiz App")
+    
+st.write(f"What is {num1} {operator} {num2}?")
+
 if operator == '+':
     answer = num1 + num2
 elif operator == '-':
@@ -16,10 +20,6 @@ else:
     # Avoid division by zero
     num2 = random.randint(1, 100)
     answer = num1 / num2
-
-st.title("Math Quiz App")
-    
-st.write(f"What is {num1} {operator} {num2}?")
 
 user_answer = st.number_input("Enter your answer:", key="user_input")
 
