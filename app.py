@@ -9,13 +9,16 @@ operator = random.choice(['+', '-', '*', '/'])
 
 if operator == '+':
     answer = num1 + num2
+    answer=round(answer)
 elif operator == '-':
     answer = num1 - num2
+    answer=round(answer)
 elif operator == '*':
     answer = num1 * num2
+    answer=round(answer)
 else:
     num2 = random.randint(1, 100)
-    answer = round(num1 / num2, 2)
+    answer = round(num1 / num2)
 
 st.write(f"What is {num1} {operator} {num2}?")
 
