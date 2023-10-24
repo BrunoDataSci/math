@@ -34,15 +34,11 @@ def main():
     if st.button("Check Answer"):
         if user_answer == st.session_state.answer:
             st.success("Correct!")
+            
         else:
             st.error(f"Wrong. The correct answer is {st.session_state.answer}")
-        
+            
         st.write(f"The answer was {st.session_state.num1} {st.session_state.operator} {st.session_state.num2} = {st.session_state.answer}")
-    
-    if st.button("New Question", key="new_question"):
-        # Generate a new question manually
-        st.session_state.num1, st.session_state.num2, st.session_state.operator, st.session_state.answer = generate_question()
-        # Restart the app
         main()
 
 if __name__ == "__main__":
