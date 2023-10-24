@@ -40,13 +40,9 @@ def main():
         
         st.write(f"The answer was {st.session_state.num1} {st.session_state.operator} {st.session_state.num2} = {st.session_state.answer}")
 
-        # Clear the content of the app
-    st.empty()
-    generate_question()
-    if st.button("Restart"):
-        # Restart the app
-        main()
-
+    if st.button("Refresh"):
+        # Simulate a page refresh
+        st.caching.clear_cache()
         
 
 if __name__ == "__main__":
