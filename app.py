@@ -44,7 +44,7 @@ def main():
         # Simulate a page refresh
         del st.session_state[num1]
         st.caching.clear_cache()
-        main()
+        generate_question()
         
 
 if __name__ == "__main__":
