@@ -27,7 +27,9 @@ if st.button("Check"):
     if user_answer != None:
         if user_answer == answer:
             st.success("Correct!")
+            user_answer = None
         else:
             st.error("Wrong")
+            user_answer = None
     st.write(f'The correct answer is {answer}')
 st.empty()
