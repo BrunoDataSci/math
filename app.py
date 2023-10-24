@@ -22,14 +22,7 @@ st.write(f"What is {num1} {operator} {num2}?")
 
 user_answer = st.number_input("Enter your answer:")
 
-if user_answer is not None:
-    if st.button("Check Answer"):
-        if user_answer == answer:
-            st.success("Correct!")
-            st.empty()
-        else:
-            st.error(f"Wrong. The correct answer is {answer}")
-            st.empty()
+if user_answer == answer:
+    st.success("Correct!")
 else:
-    st.empty()
-
+    st.error(f"Wrong. The correct answer is {answer}")
