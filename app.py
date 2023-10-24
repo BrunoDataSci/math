@@ -14,17 +14,16 @@ elif operator == '-':
 elif operator == '*':
     answer = num1 * num2
 else:
-    # Avoid division by zero
     num2 = random.randint(1, 100)
     answer = round(num1 / num2, 2)
 
 st.write(f"What is {num1} {operator} {num2}?")
 
-user_answer = st.number_input("Enter your answer:", value=100000000000)
-if user_answer != 100000000000:
-    if user_answer == answer:
-        st.success("Correct!")
-    else:
-        st.error("Wrong")
-else:
-    None
+user_answer = st.number_input("Enter your answer:", value=None)
+if st.button("Check"):
+    if user_answer != None:
+        if user_answer == answer:
+            st.success("Correct!")
+        else:
+            st.error("Wrong")
+
