@@ -24,7 +24,10 @@ def generate_question():
 def main():
     st.title("Math Quiz App")
 
-    st.session_state.num1, st.session_state.num2, st.session_state.operator, st.session_state.answer = generate_question()
+    if "num1" not in st.session_state:
+        st.session_state.num1, st.session_state.num2, st.session_state.operator, st.session_state.answer = generate_question()
+    
+    st.write(f"What is {st.session_state.num1} {st.session_state.operator} {st.session_state.num2}?")
     
     user_answer = st.number_input("Enter your answer:")
     
@@ -43,4 +46,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
